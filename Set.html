@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set</title>
+</head>
+
+<body style="background-color: #262626; color: #fff;">
+
+    <script>
+
+        console.log("Hellow there..");
+
+        //Iterables
+        //iterables means where we can apply own for of loop that is called as iterable (string and arrray are itearble)
+
+        // const names="raunak";
+
+        // const arrays=[2,5,4,9,3];
+
+
+        // for(let array of arrays){
+        //     console.log(array)
+        // }
+
+        // for(let name of names){
+        //     console.log(name)
+        // }
+
+
+        //Sets are iterable
+        //store data
+        //sets also have its own methods
+        //No-indexing based access
+        //order is not guranteed
+        //unique items only (no duplicates allowed)
+
+
+
+        // const arrays = [2, 5, 4, 9, 3];
+
+        // const numbers = new Set([4, 8, 6, 7]);
+        // numbers.add(1)
+        // numbers.add([2, 5, 4, 9, 3])
+        // numbers.add([2, 5, 4, 9, 3]);
+
+        // if (numbers.has(1)) {
+        //     console.log("1 is present")
+        // } else {
+        //     console.log("1 is not present")
+        // }
+
+        // numbers.delete(1)
+        // numbers.clear(1)
+        // console.log(numbers.entries(1))
+        // console.log(numbers);
+
+        // for (const number of numbers) {
+        //     console.log(number)
+        // }
+
+        const myArray = [2, 4, 5, 4, 7, 6, 7];
+
+        // const uniqueValueFind=new Set(myArray);
+
+        // console.log("find Elm",uniqueValueFind)
+
+        // console.log(myArray)
+
+        //find length in sets
+
+        //  const uniqueValueFind=new Set(myArray);
+        //  let length=0;
+
+        //  for (const element of uniqueValueFind) {
+        //      length ++
+        //  }
+
+
+        //  console.log(length)
+
+        //Map Object
+
+        // const person = new Map();
+
+        // person.set("firstname", "raunak")
+        // person.set("age", 8);
+        // person.set(1, 8);
+        // person.set([1,5,6])
+        // // console.log(person.get("firstname"))
+        // // console.log(person.keys())
+
+        // for(let [key,value] of person){
+        //     console.log(key)
+        //     // console.log(value)
+        // }
+
+
+        // const person=new Map([["firstname","raunak singh"],["age",18]]);
+
+
+        // for(let [key,value] of person){
+        //     console.log(key,value)
+        // }
+
+
+
+        //     const person={
+        //         id:1,
+        //         firstname:"rishi"
+        //     }
+        //     const person2={
+        //         id:2,
+        //         firstname:"raunak"
+        //     }
+
+        //    const addValueInObjectThrowTheMapFunc=new Map();
+
+        //    addValueInObjectThrowTheMapFunc.set(person,{age:18 , gender:"male"});
+        //    addValueInObjectThrowTheMapFunc.set(person2,{age:10 , gender:"fimale"});
+
+
+        //    console.log(addValueInObjectThrowTheMapFunc.get(person).gender);
+
+        //    console.log(addValueInObjectThrowTheMapFunc.get(person2).firstname);
+
+
+
+        //Object clone
+
+        // const obj={
+        //     id:1,
+        //     firstname:"rishi"
+        // }
+
+
+        // const onj2=obj;
+        // obj.age=18
+
+        // console.log(obj)
+        // console.log(onj2)
+
+
+        // const obj={
+        //     id:1,
+        //     firstname:"rishi"
+        // }
+
+
+        // const obj2={...obj};
+        // obj.age=18
+        // obj2.gender="male"
+
+        // console.log(obj)
+        // console.log(obj2)
+
+        // const array=[1,4,5,3];
+
+        // const array2=[...array];
+        // array.push(5)
+
+        // console.log(array)
+        // console.log(array2)
+
+        //When we dont want if add Aarray value both array then use it
+
+        // const obj={
+        //     id:1,
+        //     firstname:"rishi"
+        // }
+
+        // const onj2=Object.assign({},obj);
+        // obj.age=18
+
+        // console.log(obj)
+        // console.log(onj2);
+
+        //Optional channing
+
+        // const user = {
+        //     id: 1,
+        //     firstname: "rishi",
+        //     details:{address:"mumbai"}
+        // }
+
+        // console.log(user?.details?.address)
+
+    </script>
+</body>
+
+</html>

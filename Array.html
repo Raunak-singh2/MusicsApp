@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #262626; color: #ffff;">
+    <h1>js scritp</h1>
+
+    <p id="paraEl" style="letter-spacing: 5px;"></p>
+    <button id="btn">Get otp</button>
+
+    <script>
+
+        // Order Collection of Items:- (Array);
+
+
+        // const array = ["mango", "furites", "banana", "pineApple"];
+
+        // array[1] = "Gowa";
+
+        // console.log(Array.isArray(array));
+
+        // array.push("raunak"); add value in array from last
+        // array.pop() remove array value from the last
+        // array.shift("rishi") remove araay value from the last
+        //  array.unshift("shivam") add value from begning
+
+
+
+        //Primitive or refrensh type
+
+        //Primitive type
+
+
+        // let num1 = 6;
+        // let num2 = num1;
+
+        // console.log("num 1 is:- ", num1)
+        // console.log("num 1 is:- ", num2)
+        // console.log("afater changing num1:- ")
+        // num1++;
+        // console.log("num 1 is:- ", num1)
+        // console.log("num 1 is:- ", num2)
+
+        //Reference type 
+
+        // let array1 = ["itmes1", "itmes2"];
+        // let array2 = array1;
+
+        // console.log(array1)
+        // console.log(array2)
+        // array1.push("items3")
+        // console.log(array1)
+        // console.log(array2)
+
+        // Array Cone 
+
+        // const array1 = ["item1", "items2"];
+        // const array2=array1;   1st method to    clone array
+        // array1.push("item3");
+
+        //  const array2 = array1.slice(0).concat(["raunak","rishi"]);  
+        //   2nd  method to clone array
+        // array1.push("item3");
+
+        // const array2=[].concat(array1,["raunak","rishi"]); 
+        //  3rd method to clone array
+        // array1.push("item3");
+
+        // console.log(array1==array2)
+        // console.log(array1)
+        // console.log(array2);
+        // const array2 = [...array1,"rishi","raunak","sonu"];
+
+        // const newArrayWithSpread = ["newArray1", "newArray2"];
+
+
+        // const array2 = [...array1, ...newArrayWithSpread]
+
+        // array1.push("item3", "item4");
+        // console.log(array1 === array2)
+
+        // console.log(array1)
+        // console.log(array2)
+
+        //for loop in array
+
+        // const array1 = ["item1", "items2", "item3", "items4"];
+
+        // console.log(array1.reverse())
+
+        // const newArray = [];
+
+        // console.log(newArray)
+
+        // console.log(array1.length);
+
+        // for (let i = 0; i < array1.length; i++) {
+        //    newArray.push(array1[i].toUpperCase());
+        // }
+        /* 
+       For of loop we can use only the ARRAY elements
+       For in loop we can use only the OBJECT elements
+
+        */
+
+        // for (let item of array1) {
+        //     newArray.push(array1[item].toLocaleUpperCase())
+        // }
+        // console.log(array1[array1.length-1])
+
+        // const array1 = ["item1", "item2", "item3", "item4"];
+
+        // Foor of loop
+        // In array case we should use for of  otherwise tradisional for loop 
+
+        //  for(let arrays of array1){
+        //     console.log("for of loop : -",arrays);
+        //  }
+
+        //For in loop (if we loop normal array in for in loop then loops will returns only the index number)
+
+
+
+        //  for(let index in array1){
+        //     console.log("for in loop : -",array1[index])
+        //  }
+
+
+
+        // const array2=[];
+
+        // let i=0;
+
+        // while(i < array1.length){
+        //     array2.push(array1[i].toLocaleUpperCase());
+        //     i++
+        // }
+        // let i=0;
+
+        //   do{
+        //     array2.push(array1)
+        //   }while (i< array1.lenght) 
+
+        // array1.forEach(element => {
+        //      array2.push(element.toLocaleUpperCase())
+        // });
+        // console.log(array2);
+        // array2.reverse();
+        // console.log(array2)
+
+
+
+
+        //ARRAY DESTRUCTURING
+
+        //     const myArray = ["items1", "items2", "items3", "items4"];
+
+        //     const newArr = [];
+
+        //     let [value1,value2,...myRestArray] = myArray;
+
+        //     value1 = "raunak chaninging.."
+
+        //    const rest=myRestArray.concat(value1,value2)
+        //    rest.reverse()
+
+        //     console.log(rest)
+
+
+
+        // OBJECT IS ALSO Reference TYPE  
+
+        // object have two way to access our data dot (.) notaions and breaket notisation []
+
+        // const key = "email";
+        // const persons = {
+        //     name: "raunak", //key: => name                
+        //     age: 18,        //value: => raunak
+        //     id: 1,
+        //     "myHobbies hobbies": ["sleepin", "playingCricket", "running", "waking"]
+        // }
+        // persons.gender = "male"
+        // persons["locality"] = "Indian"
+        // persons[key] = "raunaksingh847203@gmail.com";
+
+
+        // console.log(persons["name"], persons["age"])
+        // console.log(persons["myHobbies hobbies"]);
+
+        // console.log(persons)
+
+
+        // const persons = {
+        //     name: "raunak", //key: => name                
+        //     age: 18,        //value: => raunak
+        //     id: 1,
+        //     "myHobbies hobbies": ["sleepin", "playingCricket", "running", "waking"],
+        // }
+
+        //   for in 
+        //   Object.keys
+
+        // if we and to use for of loop in object then we have to use this syntex beacuse ours browsre still did'n support so tha's why use this syntex (Object keys)
+
+
+        // for (let item of Object.keys(persons)) {
+        //     console.log(`${item}:- ${persons[item]}`)
+        // }
+
+        // for (let person in persons) {
+        //     console.log(`${person}: ${persons[person]}`);
+        // }
+        // if (persons["myHobbies hobbies"][1] === "playingCricket") {
+        //     alert("your user match")
+        //     console.log(persons["myHobbies hobbies"][1])
+        // }
+
+        //    const obj2=Object.keys(persons);
+        //    console.log(obj2)
+
+        //    console.log(Array.isArray(obj2))
+
+        //    for(let key of Object.keys(persons)){
+        //     console.log(persons[key])
+        //    }
+
+        //   Computed properties
+
+        // const key1 = "object1";
+        // const key2 = "object2";
+
+        // const value1 = "myValue1"
+        // const value2 = "myValue2"
+
+
+        //    const obj={
+        //      [key1]:value1,
+        //      [key2]:value2,
+        //    }
+
+        // const obj={}
+
+        // obj[key1]=value1
+        // obj[key2]=value2
+
+        //    console.log(obj)
+
+        const array = [1, 5, 8, 2, 6, 4, 9];
+        const array2 = [2, 5, 7, 8, 2, 6];
+
+
+        const spread = [...array, ...array2, "raunak"]
+        console.log(spread)
+
+        //spread in objects
+
+        // const persons = {
+        //     name: "raunak", //key: => name                
+        //     age: 18,        //value: => raunak
+        //     id: 1,
+        //     "myHobbies hobbies": ["sleepin", "playingCricket", "running", "waking"],
+        // }
+        // const persons2 = {
+        //     name: "raunak", //key: => name                
+        //     age: 18,        //value: => raunak
+        //     id: 1,
+        //     "myHobbies hobbies": ["sleepin", "playingCricket", "running", "waking"],
+        // }
+
+        // const newObj = { ...persons, persons2, unique: "value1" }
+        // console.log(newObj);
+
+
+        // const name = "raunaksingh";
+
+        // for (let i = 1; i < name.length; i++) {
+        //     console.log(name[i])
+        // }
+
+        /* Function to generate combination of password */
+
+        const paraEl = document.getElementById("paraEl")
+        const btnEl = document.getElementById("btn")
+
+        function otpFunc() {
+            let pass = ''
+            let num = "~!@#$%^&*()_=0123456789";
+            for (let i = 1; i <= 4; i++) {
+                let randNum = Math.floor(Math.random() * num.length);
+                pass += num.charAt(randNum)
+            }
+            paraEl.innerHTML = pass
+            return pass;
+        }
+
+        btnEl.addEventListener("click", () => {
+            otpFunc();
+        })
+
+        //Object Destructuring
+
+        // const persons = {
+        //     name: "raunak", //key: => name                
+        //     age: 18,        //value: => raunak
+        //     id: 1,
+        //     "myHobbies": ["sleepin", "playingCricket", "running", "waking"],
+        // }
+
+
+        // let { name, age:myAge, myHobbies,...restData } = persons;
+        // name="shivam" 
+
+        // console.log(name, myAge,restData)
+        // for (let hobbies in myHobbies) {
+        //     console.log(myHobbies[hobbies])
+        // }
+
+        //Array inside object
+
+        // const user = [
+        //     {
+        //         username: "raunak",
+        //         age: 19,
+        //         gender: "male"
+        //     },
+        //     {
+        //         username: "rishi",
+        //         age: 18,
+        //         gender: "male"
+        //     },
+        //     {
+        //         username: "shivam",
+        //         age: 16,
+        //         gender: "male"
+        //     },
+        //     {
+        //         username: "lalu",
+        //         age: 20,
+        //         gender: "male"
+        //     },
+        // ]
+
+        const newArray = [];
+
+        // for (const iterator of user) {
+        //      console.log(iterator.username)
+        // }
+
+
+        // for (let users in Object.keys(user)) {
+
+        //     newArray.push(user[users])
+        // }
+        // console.log(newArray[0].username)
+
+
+        //Nested Object destructring
+
+        const user = [
+            {
+                username: "raunak",
+                age: 19,
+                gender: "male"
+            },
+            {
+                username: "rishi",
+                age: 18,
+                gender: "male"
+            },
+            {
+                username: "shivam",
+                age: 16,
+                gender: "male"
+            },
+            {
+                username: "lalu",
+                age: 20,
+                gender: "male"
+            },
+        ]
+
+
+        let [{ username: name }, , { gender }, ...news] = user;
+
+        console.log(name, gender, news)
+
+
+    </script>
+</body>
+
+</html>

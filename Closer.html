@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closer</title>
+</head>
+
+<body style="background-color: #2b2b2b; color: #fff;">
+    <script>
+        // console.log("hellow there....");
+        //Function can return function
+
+        // function outerFunction(){
+        //     return {name:"rk",id:1}
+        // }
+        // function outerFunction() {
+        //     function innerFunction() {
+        //         console.log("Hellow world.");
+
+        //     }
+        //     return innerFunction;
+
+        // }
+
+        // const ans = outerFunction();
+        // console.log(ans());
+
+        // function printFullName(firstname,lastname){
+        //     function fullName(){
+        //       return `${firstname} ${lastname}`;
+        //     }
+        //     return fullName;
+        // }
+
+        // const ans=printFullName("raunak","singh");
+        // console.log(ans.call());
+
+//closer example
+
+//   function hellow(x){
+//       const a="vara";
+//       const b="varb";
+//       return function(){
+//         console.log(a,b,x)
+//       }
+//   }
+//   const ans2=hellow("raunak");
+
+//   console.log(ans2());
+
+//closer example square root find
+
+//  function squireRoot(x){
+//     return function(y){
+//         return x ** y;
+//     }
+//  }
+
+//  const ans=squireRoot(3);
+//  console.log(ans(3))
+
+function func(){
+    let counter=0
+    return function(){
+        if(counter < 1){
+            console.log("Hi you called me")
+            counter++;
+        }else{
+            console.log("Mai already calles hu");
+        }
+       
+    }
+}
+const ans=func();
+console.log(ans())
+console.log(ans())
+
+    </script>
+</body>
+
+</html>
+
+

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+
+<body style="background-color: #262626; color: #ffff;">
+    <script>
+
+
+//Function declaration in js
+
+        // function addTwoNum(num) {
+
+        //     if (num % 2 === 0) {
+        //         console.log(num, "num is zero")
+        //     } else {
+        //         console.log(num, "num not eaual zero")
+        //     }
+
+        // }
+
+        // addTwoNum(10);
+
+
+        // function firstChar(anystring) {
+        //     return anystring[1]
+        // }
+
+        // console.log(
+        //     firstChar("raunak")
+        // )
+
+
+        // function indexFind(array, target) {
+
+        //     for (let i = 0; i < array.length; i++) {
+        //         if (array[i] === target) {
+        //             return i;
+        //         }
+
+        //     }
+        //     return -1;
+
+        // }
+        // const myArray = [2, 5, 6, 7, 8, 6, 3, 2];
+
+        // const ans = indexFind(myArray, 7);
+        // console.log(ans)
+
+
+
+//Function Expression in js
+
+
+        // const addTwoNum = function (num1, num2) {
+        //     return num1 + num2
+        // }
+
+        // console.log(addTwoNum(5, 12))
+
+
+        // const findIndexNum = (array, targetNum) => {
+
+        //     for (let i = 0; i < array.length; i++) {
+        //         if (array[i] === targetNum) {
+        //             return i;
+        //         }
+        //     }
+        //     return "not index found";
+        // }
+
+        // const myArrEl = [2, 5, 8, 9, 6, 3, 7];
+
+        // const ans = findIndexNum(myArrEl, 9);
+        // console.log(ans)
+
+
+        // const addTwoN = (num) => {
+        //     return num % 2 === 0
+        // }
+
+        // console.log(addTwoN(7))
+
+ //Hoiesting
+
+        // hellow();
+//function declartion in Hoisting
+
+        // function hellow() {
+        //     console.log("Hellow....")
+        // }
+//function expresion in not Hoisting
+
+        //  hoisting();
+
+        // const hoisting=function(){
+        //     console.log("hellow hoiesting....")
+        // }
+
+//Function inside function (Higher order function)
+
+        // const app = () => {
+        //     const inSideFunc = () => {
+        //         console.log("Inside function2")
+        //     }
+        //     const addNum = (num1, num2) => {
+        //         console.log(num1 + num2)
+        //     }
+        //     const multiplye = (num1, num2) => {
+        //         console.log(num1 * num2)
+        //     }
+        //     console.log("App fuction1");
+        //     inSideFunc();
+        //     addNum(2, 8);
+        //     multiplye(6, 2)
+        // }
+
+        // app();
+
+
+//Laxical scope
+
+// where ours program is that globale scope
+
+        // const myVar = "value1"
+
+        // function myFunc() {
+
+        //     function myFunc1() {
+        //         // let myVar=56
+        //         const myFunc2 = () => {
+        //             console.log("Inside funce 1", myVar)
+        //         }
+        //         myFunc2()
+        //     }
+
+        //     console.log("dswd", myVar)
+        //     myFunc1();
+        // }
+        // myFunc();
+
+ //Block vs Function scope so we  canno't acces value out side the block
+ // let and const are block scope 
+  // var is function scope
+
+        // Block syntex =====> {
+
+        // }
+
+        // {
+        //     const firstName = "rishi";
+        //     console.log(firstName)
+
+        // }
+
+        // {
+        //     var firstName="raunak"
+        // }
+        // console.log(firstName);
+
+        //     if(true){
+        //          let names="sonu";
+        //         console.log("Hellow")
+        //     }
+        //    console.log(names)
+
+        // function myFunc() {
+
+        //     if (true) {
+        //         // in block case use only var not use let and const
+        //         var firstName = "raunak";
+        //         console.log(firstName)
+        //     }
+        //     if (true) {
+
+        //         console.log(firstName);
+        //     }
+        //        console.log(firstName);
+        // }
+
+        // myFunc();
+
+
+        // Default parameters       
+
+
+        //  function addNum(a,b){
+        //     if(typeof b==="undefined"){
+        //        b=0;
+        //     }
+        //     return a+b
+        //  }
+        //   console.log(addNum(2))
+
+        // function addTwo(a,b=0){
+        //     return a*b;
+        // }
+        // console.log(addTwo(5,5))
+
+
+//Rest parameters
+
+        // function restParaMeter(a,b,c,...d){
+        //     console.log(`a id ${a}`)
+        //     console.log(`a id ${b}`)
+        //     console.log(`a id ${c}`)
+        //     console.log(`a id ${d}`,d)
+        // }
+
+        // restParaMeter(2,5,6,3,8,7,8)
+
+        // function addAll(...number) {
+        //     console.log(number)
+        //     console.log(Array.isArray(number))
+        //     let total = 0;
+        //     for (let num of number) {
+        //         total +=num;
+        //     }
+        //     return total
+        // }
+
+        // console.log(addAll(3, 4, 7, 1,122,4552,10));
+
+ //parameters destructring
+
+        //object
+        //react
+
+
+        // const person = {
+        //     firstname: "raunak",
+        //     age: 18
+        // }
+
+        //  function printDetails(obj){
+        //     console.log(obj.firstname)
+        //     console.log(obj.age)
+        //  }
+
+        // printDetails(person)
+
+
+        //  function printDetails({firstname,age}){
+        //     console.log(firstname)
+        //     console.log(age)
+        //  }
+
+        // printDetails(person)
+
+//callback function
+
+        // function myFunc(a){
+        //     console.log("hellow world");
+        //     console.log(a);
+        // }
+
+        // myFunc([1,2,5])
+
+        // function myFunc2(a){
+        //     console.log("hellow world");
+        //     console.log(a);
+        // }
+
+        // myFunc([{name:"rishi",age:15}]);
+
+        //Higher order function;
+
+
+
+        // function myFunc1(name) {
+        //     console.log("inside func one")
+        //     console.log(`your name ${name}`)
+        // }
+
+        // function myFun(callback) {
+        //     callback("raunak");
+        // }
+
+
+        // myFun(myFunc1);
+
+
+        //Function returining function
+
+
+        // function myfun(){
+        //     return [1,2,3,4]
+        // }
+
+        // const ans=myfun();
+
+        // console.log(ans)
+
+
+// Higher order function
+
+
+        // function myfun() {
+        //     function hellow() {
+        //         console.log("Im function returnini function")
+        //     }
+        //     return hellow;
+        // }
+
+        // const ans = myfun();
+        // ans();
+
+
+        // function myfun() {
+        //     return function hellow() {
+        //         console.log("Im function returnini function")
+        //     }
+
+        // }
+
+        // const ans = myfun();
+        // ans();
+
+
+
+    </script>
+</body>
+
+</html>

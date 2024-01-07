@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How js Work</title>
+</head>
+
+<body bgcolor="#2b2b2b" style="color: #fff;">
+  <div>How js work</div>
+
+  <script>
+    // Animal class (parent class)
+    // class Animal {
+    //   constructor(name, species) {
+    //     this.name = name;
+    //     this.species = species;
+    //   }
+
+    //   makeSound() {
+    //     return "Generic animal sound";
+    //   }
+
+    //   sleep() {
+    //     return `${this.name} is sleeping`;
+    //   }
+
+    //   displayInfo() {
+    //     return `<strong>${this.name}</strong> the ${this.species}`;
+    //   }
+    // }
+
+    // // Bird class (inherits from Animal)
+    // class Bird extends Animal {
+    //   constructor(name, species, wingspan) {
+    //     super(name, species);
+    //     this.wingspan = wingspan;
+    //   }
+
+    //   makeSound() {
+    //     return `${this.name} the bird chirps`;
+    //   }
+
+    //   fly() {
+    //     return `${this.name} is flying with wingspan ${this.wingspan} inches`;
+    //   }
+
+    //   displayInfo() {
+    //     return super.displayInfo() + `, Wingspan: ${this.wingspan} inches`;
+    //   }
+    // }
+
+    // // Mammal class (inherits from Animal)
+    // class Mammal extends Animal {
+    //   constructor(name, species, furColor) {
+    //     super(name, species);
+    //     this.furColor = furColor;
+    //   }
+
+    //   makeSound() {
+    //     return `${this.name} the mammal makes a mammalian sound`;
+    //   }
+
+    //   run() {
+    //     return `${this.name} is running with ${this.furColor} fur`;
+    //   }
+
+    //   displayInfo() {
+    //     return super.displayInfo() + `, Fur Color: ${this.furColor}`;
+    //   }
+    // }
+
+    // // Create instances of the classes
+    // const parrot = new Bird("Polly", "Parrot", 10);
+    // const lion = new Mammal("Leo", "Lion", "golden");
+
+    // // Display information on the webpage
+    // function displayOnPage(info) {
+    //   const container = document.getElementById("zoo-container");
+    //   const div = document.createElement("div");
+    //   div.classList.add("animal-container");
+    //   div.innerHTML = info;
+    //   container.appendChild(div);
+    // }
+
+    // displayOnPage(parrot.displayInfo());
+    // displayOnPage(parrot.fly());
+    // displayOnPage(parrot.sleep());
+    // displayOnPage("<hr>"); // Add a horizontal line for separation
+    // displayOnPage(lion.displayInfo());
+    // displayOnPage(lion.run());
+    // displayOnPage(lion.sleep());
+
+    // console.log(this)
+    // console.log(window)
+    // console.log(firstname);
+    // var firstname = "raunak";
+
+
+
+
+    //Gloable excution context;
+
+
+
+    //Hoiesting in js
+
+    // console.log(myFune());
+
+    //function declaration have hoiesting
+    // function myFune(){
+    //   return "Hoiesting";
+    // }
+
+    // console.log(myFunc);
+
+    //function expressio dose not hoiesting its set the value undefine only var case
+    // var myFunc = function () {
+    //   console.log("Hoiesting");
+    // }
+
+    // console.log(myFunc);
+
+
+    //let and const have hoiesting var dosent hoiesting
+
+
+    // let myFunc = function () {
+    //   console.log("Hoiesting");
+    // }
+
+    // console.log(myFunc);
+
+
+
+
+    //function excution context;
+
+    // let foo="foo";
+
+    // console.log(foo);
+
+    // function getFullName(firstname,lastname){
+    //       console.log(arguments[0]);
+    //       let myVar="var inside function";
+    //       console.log(myVar)
+    //       const fullName=firstname + " " + lastname;
+    //       return fullName;
+    // }
+
+
+    // const personName=getFullName("raunak","singh");
+    // console.log(personName)
+
+
+    // Laxical enviroment and scope chain
+
+    let lastname = "raunak";
+
+
+    const userDeatails = () => {
+      let firstname = "rishi";
+      function myfunc() {
+        console.log(firstname);
+        console.log(lastname);
+      }
+      myfunc();
+    }
+
+    userDeatails();
+
+
+
+  </script>
+
+</body>
+
+</html>

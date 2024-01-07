@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototypal Inheritance</title>
+</head>
+
+<body style="background-color: #262626; color: #fff;">
+    <h1>List of Ours Daily users</h1>
+    <p id="userlist"></p>
+    <button id="btn">Show suser</button>
+    <script>
+
+        console.log("Hellow there..")
+
+        //Methods
+        //Function inside object
+
+        // const personss = {
+        //     firstname: "rishirajput",
+        //     age: 18,
+        //     hobbies: ["sleepin", "playing cricket", "singing"],
+        //     about: function () {
+        //         return (`Hellow peson name is ${this.firstname} and age ${this.age} and my hobbies are ${this.hobbies[1]}`)
+        //     }
+        // }
+        // console.log(personss["age"]);
+        // console.log(personss.about());
+
+        const luserlistEl = document.getElementById("userlist")
+        const btnEl = document.getElementById("btn")
+
+        // const person1 = {
+        //     firstname: "raunak",
+        //     age: 18,
+        //     about: personInfo
+        // }
+        // const person2 = {
+        //     firstname: "aniket",
+        //     age: 18,
+        //     about: personInfo
+        // }
+        // const person3 = {
+        //     firstname: "shivam",
+        //     age: 18,
+        //     about: personInfo
+        // }
+        // const person4 = {
+        //     firstname: "sonu",
+        //     age: 18,
+        //     about: personInfo
+        // }
+
+        // function personInfo() {
+        //     // luserlistEl.innerHTML = (`The person name is ${this.firstname} and age ${this.age}`)
+        //     console.log(`The person name is ${this.firstname} and age ${this.age}`)
+        // }
+        // // btnEl.addEventListener("click", () => {
+        // //     person1.about();
+        // //     person2.about();
+        // //     person3.about();
+        // //     person4.about();
+        // // })
+
+        // person1.about();
+
+
+        // console.log(this);
+        // console.log(this === window);
+
+
+        // function myFunc() {
+        //     // "use strict"
+        //     console.log(this);
+        // }
+
+        // myFunc.call()
+
+
+        // Call ,Apply, Bind    
+
+
+        //    function myFunc(){
+        //     console.log("Hellow this me");
+        //    }
+
+        //    myFunc.call();
+
+        // function sayHii(){
+        //     console.log("Hiiii....");
+        // }
+
+        // sayHii.call();
+
+
+
+        // const person = {
+        //     firstname: "rishi",
+        //     age: 18,
+        //     about: function(hobbies, details) {
+        //     console.log(`The name is ${this.firstname} and age is ${this.age} or bobbise are ${hobbies} or adddres is ${details}`);
+        //     }
+        // }
+        // const person6 = {
+        //     firstname: "raunak",
+        //     age: 15,
+        // }
+        // const person7 = {
+        //     firstname: "shivam",
+        //     age: 12,
+        // }
+
+
+        // // call
+        //  person.about.call(person7,"sleepin","dbgn");
+
+
+        //apply
+        // function funcInfo(hobbies, details) {
+        //    console.log(`The name is ${this.firstname} and age is ${this.age} or    bobbise are ${hobbies} or adddres is ${details}`);
+        //    }
+
+
+        // const personr = {
+        //     firstname: "rishi",
+        //     age: 18,
+        // }
+        // const personr6 = {
+        //     firstname: "raunak",
+        //     age: 15,
+        // }
+        // const personr7 = {
+        //     firstname: "shivam",
+        //     age: 12,
+        // }
+
+        // // call
+
+        //   funcInfo.call(personr6, "playingCricket", "dbg");
+
+        // // apply
+        //   funcInfo.apply(personr7, ["playingCricket", "dbg"]);
+
+        // // call and apply are same;
+
+        // // bind
+
+        //  const func=funcInfo.bind(personr,"sleeping","waking")
+        // func();
+
+
+        // don't do this mistake
+
+
+        //Empty Object create methode
+
+        // const obj = {
+        //     key1: "value1",
+        //     key2: "value2"
+        // }
+
+        // const obj2 = Object.create(obj);
+        // obj.name = "shivam";
+        // // obj.key2="uniqe";
+        // console.log(obj2)
+
+
+        //oops (object oriented programimng)
+
+
+        // const userObjectMethod = {
+        //     about: function (dost) {
+        //         return `Your username ${this.firstname} and age is ${this.age} and dost is ${dost}`
+        //     },
+        //     is18: function () {
+        //         return this.age >= 18;
+        //     },
+        //     add: function (x = 0, y = 0) {
+
+        //         return x + y;
+        //     },
+        //     multipication: function (x = 0, y = 0) {
+        //         return x * y;
+        //     }
+
+
+        // }
+
+        // const createUser = (firstname, lastname, email, age, address) => {
+        //     const user = Object.create(userObjectMethod);
+        //     user.firstname = firstname;
+        //     user.lastname = lastname;
+        //     user.email = email;
+        //     user.age = age;
+        //     user.address = address;
+        //     return user;
+        // }
+
+        // const newUser = createUser("raunak", "singh", "raunaksingh847203@gmail.com", 18, "dbg biraul");
+        // const newUser2 = createUser("rishi", "singh", "raunaksingh847203@gmail.com", 16, "dbg biraul");
+        // const newUser3 = createUser("shivam", "singh", "raunaksingh847203@gmail.com", 15, "dbg biraul");
+
+        // console.log(newUser.add(2, 6));
+        // console.log(newUser.multipication(2, 6));
+        // console.log(newUser.about("Monu"));
+        // console.log(newUser.__proto__);
+        // const abouts = newUser.about("monu");
+        // console.log(abouts)
+        // console.log(newUser.is18())
+
+
+
+        //javascript function ====> function + object
+
+
+        // function hii(){
+        //     console.log("hellow world...")
+        // }
+
+        // hii.myOwnProperty="my unique value";
+
+        // console.log(hii.myOwnProperty);
+
+        //only function have prototype property
+
+        //add value in prototype
+        // hii.prototype.abcd="abcde";
+        //add function in prototype
+
+        // hii.prototype.singer=function(){
+        //     return "tu na na.."
+        // }
+        // console.log(hii.prototype.singer())
+
+        // const objs={name:"raunak"}
+
+        // if(objs.prototype){
+        //     console.log("Prototype is avilable")
+        // }else{
+        //     console.log("Prototype is not avilable")
+        // }
+
+
+
+        // const userObjectMethod = {
+        //     about: function (dost) {
+        //         return `Your username ${this.firstname} and age is ${this.age} and dost is ${dost}`
+        //     },
+        //     is18: function () {
+        //         return this.age >= 18;
+        //     }
+
+        // }
+
+
+        //Prototype and Prototype example
+
+        // function createUsers(firstname, lastname, email, age, address) {
+        //     const user = Object.create(createUsers.prototype);
+        //     user.firstname = firstname;
+        //     user.lastname = lastname;
+        //     user.email = email;
+        //     user.age = age;
+        //     user.address = address;
+        //     return user
+        // }
+
+        // createUsers.prototype.about=function(dost){
+        //     return `User name is ${this.firstname} and age is ${this.age} or dost is ${dost} and gmail is ${this.email}}`
+        // }
+
+        // createUsers.prototype.is18=function(){
+        //       return this.age <=18;
+        // }
+
+        // createUsers.prototype.singing=function(argu){
+        //     return `tu na na na na ${argu}`
+        // }
+
+
+        //   console.log(createUsers.prototype);
+
+        // const newUserm = createUsers("rishi", "rajput", "rishirajput6201@gmail.com", 15, "dbg bihar");
+
+        // console.log(newUserm.is18());
+        // console.log(newUserm.about("sonu"));
+        // console.log(newUserm.singing("pehu"));
+
+
+        //New keyword
+
+        //new key word do three things
+
+        //create empty object
+        //return that object {}
+
+
+        // function cartUser(name,age){
+        //     this.name=name;
+        //     this.age=age;
+        // }
+        // cartUser.prototype.aboutUser=function(){
+        //     return `The name is ${this.name} and age is ${this.age}`
+        // }
+        // const user1=new cartUser("raunak",12);
+        // const user2=new cartUser("rishi",15);
+
+        // console.log(user1.aboutUser())
+        // console.log(user2.aboutUser())
+
+
+        //using this key word
+
+        // function Person1(firstname, lastname, email, age, adddres) {
+        //     this.firstname = firstname;
+        //     this.lastname = lastname;
+        //     this.email = email;
+        //     this.age = age;
+        //     this.adddres = adddres;
+        // }
+
+        // Person1.prototype.about = function () {
+        //     luserlistEl.innerHTML = `The name is ${this.firstname} and age is ${this.age} or ✉️ ${this.email} and 🧑🏻 ${this.adddres}`
+        // }
+
+        // Person1.prototype.singing = function (dost) {
+        //     luserlistEl.innerHTML = `la la la la ${dost}`
+        // }
+        // Person1.prototype.is18 = function () {
+        //     luserlistEl.innerHTML = this.age >= 18;
+        // }
+
+
+        // const user1 = new Person1("shivam", "kumar", "shivam@gamil,com", 18, "dbg supual biraul 847203");
+        // const user2 = new Person1("rishi", "kumar", "shivam@gamil,com", 19, "dbg supual biraul 847203");
+
+
+        // for (let user in user1) {
+        //     if (user1.hasOwnProperty(user)) {
+        //         console.log(user)
+        //     }
+        // }
+
+        //     user1.about()
+        //     user1.singing("sonu")
+        //     user1.is18("sonu")
+
+        //    console.log(user1,user1)
+
+
+        // const array=[2,3,5,6];
+
+        // const array=new Array(2,8,5,6)
+        // array.pop()
+        // console.log(Array.prototype)
+
+
+        // using class constructor
+
+        // class cardUser {
+        //     constructor(firstname, lastname, email, age, adddres) {
+        //         console.log("consturctor is call")
+        //         this.firstname = firstname;
+        //         this.lastname = lastname;
+        //         this.email = email;
+        //         this.age = age;
+        //         this.adddres = adddres;
+        //     }
+        //     about() {
+        //         return `The name is ${this.firstname} and age ${this.age} or email ${this.email}`
+        //     }
+        //     is18() {
+        //         return this.age >= 18;
+        //     }
+        //     singing(dost) {
+        //         return `la la la laaa ${dost}`
+        //     }
+        // }
+
+        // const user1 = new cardUser("rishi", "singh", "rishiRajput@gamil.com", 18, "dbf");
+        // // console.log(user1.is18())
+        // // console.log(user1.singing("monu ji you are get married"))
+        // const user2 = new cardUser("shivam", "singh", "shivama@gamil.com", 17, "dbf.....");
+        // const user3 = new cardUser("shivam", "singh", "shivama@gamil.com", 17, "dbf.....");
+        // console.log(user3.about());
+
+
+
+        // Ex : - class constructor
+
+        //Inheritance is also here
+        // base class
+        //         class Animal {
+        //             constructor(name, age) {
+        //                 this.name = name;
+        //                 this.age = age;
+        //             }
+        //             isEating() {
+        //                 return `${this.name} is eating right now`;
+        //             }
+        //             oldAnimal(tomy) {
+        //                 return `${tomy} is year ${this.age} old ${this.age >= 5} `;
+        //             }
+        //             isCuteAnimal() {
+        //                 return `${this.name} is so cute`;
+        //             }
+
+        //         }
+
+        //         // const animals = new Animal("dunky", 5);
+        //         // console.log(animals)
+        //         // console.log(animals.isEating());
+        //         // console.log(animals.oldAnimal());
+        //         // console.log(animals.isCuteAnimal());
+
+
+        //         //dog we can say sub class drive class so on....
+        //         // Now we learn super keyword
+
+        //         // Why we super keyword super keyword is used when first constructor logics need to used anther constuector function then we use super keyword example given below.
+
+
+        //         class Dog extends Animal {
+
+        //             constructor(name, age, run) {
+        //                 super(name, age);
+        //                 this.run = run;
+        //             }
+        //             isEating() {
+        //                 return `Modifyinhg eating for : ${this.name} eting now`
+        //             }
+        //             running() {
+        //                 return `${this.name} is running at ${this.run}kmp/h `
+        //             }
+
+        //         }
+
+        //         // object / instance
+        //         const tommy = new Dog("tomy", 18, 20);
+        //         // console.log(tommy);
+        //         console.log(tommy.isEating());
+        //         // console.log(tommy.isCuteAnimal());
+        //         // console.log(tommy.oldAnimal("tomys"));
+        //         // console.log(tommy.running());
+
+
+
+        //getter and setters method
+
+        //         class person {
+        //             constructor(firstname, lastname, age) {
+        //                 this.firstname = firstname;
+        //                 this.lastname = lastname;
+        //                 this.age = age;
+        //             }
+        //Why we get property because if we use get property then dont need to call methods like this fullname() then it is not ture we have to use as we using property such sa fullname or if we use like this fullname() then we get error;
+
+        //             get fullnames() {
+        //                 return `${this.firstname} ${this.lastname}`
+        //             }
+        //             set fullName(fullName) {
+        //                 const [firstname, lastName] = fullName.split(" ")
+        //                 this.firstname = firstname;
+        //                 this.lastname = lastname
+        //             }
+        //         }
+
+        //         //it's a object
+
+        //         const per1 = new person("raunak", "singh", 18);
+        //         console.log(per1)
+        //         console.log(per1.fullnames)
+        //         per1.firstname = "shivam";
+        //         per1.lastname = "rajput";
+        //         per1.age = 10
+        //         console.log(per1)
+
+
+        //static methods and property
+
+        // Animal class (parent class)
+        //   class Animal {
+        //     constructor(firstname,lastname ,species) {
+        //       this.firstname = firstname;
+        //       this.lastname=lastname;
+        //       this.species = species;
+        //     }
+
+        //     makeSound() {
+        //       return "Generic animal sound";
+        //     }
+
+        //     sleep() {
+        //       return `${this.firstname} is sleeping`;
+        //     }
+
+        //     displayInfo() {
+        //       return `<strong>${this.firstname}</strong> the ${this.species}`;
+        //     }
+        //   }
+
+        //   // Bird class (inherits from Animal)
+        //   class Bird extends Animal {
+        //     constructor(firstname,lastname, species, wingspan) {
+        //       super(firstname, species,lastname);
+        //       this.wingspan = wingspan;
+        //     }
+
+        //     makeSound() {
+        //       return `${this.firstname} the bird chirps`;
+        //     }
+
+        //     fly() {
+        //       return `${this.firstname} is flying with wingspan ${this.wingspan} inches`;
+        //     }
+
+        //     displayInfo() {
+        //       return super.displayInfo() + `, Wingspan: ${this.wingspan} inches`;
+        //     }
+        //   }
+
+
+        //   const anim=new Bird("Tomy","dog",5,"indian");
+        //   console.log(anim.fly());
+
+
+
+
+        //   // Mammal class (inherits from Animal)
+        //   class Mammal extends Animal {
+        //     constructor(name, species, furColor) {
+        //       super(name, species);
+        //       this.furColor = furColor;
+        //     }
+
+        //     makeSound() {
+        //       return `${this.name} the mammal makes a mammalian sound`;
+        //     }
+
+        //     run() {
+        //       return `${this.name} is running with ${this.furColor} fur`;
+        //     }
+
+        //     displayInfo() {
+        //       return super.displayInfo() + `, Fur Color: ${this.furColor}`;
+        //     }
+        //   }
+
+        //   // Create instances of the classes
+        //   const parrot = new Bird("Polly", "Parrot", 10);
+        //   const lion = new Mammal("Leo", "Lion", "golden");
+
+        //   // Display information on the webpage
+        //   function displayOnPage(info) {
+        //     const container = document.getElementById("zoo-container");
+        //     const div = document.createElement("div");
+        //     div.classList.add("animal-container");
+        //     div.innerHTML = info;
+        //     container.appendChild(div);
+        //   }
+
+        //   displayOnPage(parrot.displayInfo());
+        //   displayOnPage(parrot.fly());
+        //   displayOnPage(parrot.sleep());
+        //   displayOnPage("<hr>"); // Add a horizontal line for separation
+        //   displayOnPage(lion.displayInfo());
+        //   displayOnPage(lion.run());
+        //   displayOnPage(lion.sleep());
+
+
+
+
+    </script>
+</body>
+
+</html>
